@@ -1,9 +1,21 @@
 [buildout]
 parts = django
+#develop = ${django_project_name} your other package dirs here...
+download-cache = downloads
+#install-from-cache = true
+#versions = devversions
+
+#[devversions]
+#zc.buildout = 1.2.1
+#djangorecipe = 0.19.1
+#zc.recipe.egg = 1.2.2
 
 [django]
 recipe = djangorecipe
 version = ${django_version}
 project = ${django_project_name}
-wsgi=true
-settings=production
+# eggs =
+#   ${django_project_name}
+# projectegg = ${django_project_name}
+wsgi = true
+settings = production
